@@ -40,4 +40,6 @@ export default CharacterRow;
 //         <CharacterCard />
 //     )
 // }
+// o con un ternario tipo:
+// return (props.index%3 === 0 ? <CharacterCard /> : "")
 
