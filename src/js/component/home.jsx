@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import CharacterCard from "./characterCard.jsx";
 import Input from "./input.jsx"
 
 //create your first component
 const Home = () => {
 
+	let [texto, setTexto] = useState("");
+
+	const funcionCallBack = (input) => {
+		setTexto(input)
+	}
+
 	return(
 		<>
 		<h1>Listado</h1>
-		<Input />
+		<Input filtrar={funcionCallBack}/>
 		<div className="row grid">
-			<CharacterCard />
+			<CharacterCard inputText={texto}/>
 		</div>
 		</>
-
 		);
 };
 

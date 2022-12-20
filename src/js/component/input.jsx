@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 
-
 const Input = (props) => {
 
-    const handleClick = () => {
-        
-    }
+    const handleClick = function(event){
+        event.preventDefault();
+        console.log(event.target.value);
+        props.filtrar(event.target.nameToSearch.value)
+    };
 
     return(
-        <form action="" className="input-search">
+        <form action="" className="input-search" onSubmit={handleClick}>
             <input type="text"  
-             placeholder='filter here...' />
-            <button onClick={handleClick}>filter</button>
+             placeholder='filter here...' name="nameToSearch"/>
+            <button type="submit">filter</button>
         </form>
     );
 }
