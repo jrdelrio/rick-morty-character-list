@@ -19,3 +19,13 @@ ul {
 h1 {
     text-align: center;
 }
+
+.input-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px
+}
+
+.card{
+    border: none
+}

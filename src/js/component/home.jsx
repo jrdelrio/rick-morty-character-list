@@ -1,15 +1,20 @@
 import React from "react";
-import CharacterGrid from "./characterGrid.jsx";
-import data from "./data.json"
+import CharacterCard from "./characterCard.jsx";
+import Input from "./input.jsx"
 
 //create your first component
 const Home = () => {
-	return (
+
+	return(
 		<>
 		<h1>Listado</h1>
-		<CharacterGrid list={data}/>
+		<Input />
+		<div className="row grid">
+			<CharacterCard />
+		</div>
 		</>
-	);
+
+		);
 };
 
 export default Home;
